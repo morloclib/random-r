@@ -8,21 +8,27 @@ import root-r
 -----------------------
 
 instance Random Real where
+  %inline
   source R from "R/core.R" ("morloc_random_real" as random)
 
 instance Random Int where
+  %inline
   source R from "R/core.R" ("morloc_random_int" as random)
 
 instance Random Bool where
+  %inline
   source R from "R/core.R" ("morloc_random_bool" as random)
 
 instance RandomRange Real where
+  %inline
   source R from "R/core.R" ("morloc_randomRange_real" as randomRange)
 
 instance RandomRange Int where
+  %inline
   source R from "R/core.R" ("morloc_randomRange_int" as randomRange)
 
 instance RandomGroup List where
+  %inline
   source R from "R/core.R"
     ( "morloc_choice" as choice
     , "morloc_weightedChoice" as weightedChoice
@@ -35,6 +41,7 @@ instance RandomGroup List where
 -- Standalone functions
 ------------------------
 
+%inline
 source R from "R/core.R"
     ( "morloc_bernoulli" as bernoulli
     , "morloc_setSeed" as setSeed
