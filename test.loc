@@ -1,0 +1,4 @@
+module test-random-r (test)
+
+import random.test (test)
+import random-r

@@ -1,0 +1,11 @@
+name: random-r
+version: 0.1.0
+homepage: https://github.com/morloclib/random-r
+synopsis: R implementations for random number generation
+description: R implementations for random number generation
+category: numeric
+license: MIT
+author: "Zebulun Arendsee"
+maintainer: "z@morloc.io"
+github: https://github.com/morloclib/random-r
+bug-reports: https://github.com/morloclib/random-r

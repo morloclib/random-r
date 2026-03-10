@@ -1,0 +1,41 @@
+module random-r (*)
+
+import random
+import root-r
+
+
+-- Typeclass instances
+-----------------------
+
+instance Random Real where
+  source R from "R/core.R" ("morloc_random_real" as random)
+
+instance Random Int where
+  source R from "R/core.R" ("morloc_random_int" as random)
+
+instance Random Bool where
+  source R from "R/core.R" ("morloc_random_bool" as random)
+
+instance RandomRange Real where
+  source R from "R/core.R" ("morloc_randomRange_real" as randomRange)
+
+instance RandomRange Int where
+  source R from "R/core.R" ("morloc_randomRange_int" as randomRange)
+
+instance RandomGroup List where
+  source R from "R/core.R"
+    ( "morloc_choice" as choice
+    , "morloc_weightedChoice" as weightedChoice
+    , "morloc_sample" as sample
+    , "morloc_sampleWith" as sampleWith
+    , "morloc_permute" as permute
+    )
+
+
+-- Standalone functions
+------------------------
+
+source R from "R/core.R"
+    ( "morloc_bernoulli" as bernoulli
+    , "morloc_setSeed" as setSeed
+    )
